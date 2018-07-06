@@ -829,6 +829,8 @@ def process(args):
 
 
 def main():
+    from locale import setlocale, LC_ALL
+    setlocale(LC_ALL, '') # initialize locales because python doesn't
     try:
         # auto completion
         if len(argv) >= 2 and argv[1] == "--auto_complete":
